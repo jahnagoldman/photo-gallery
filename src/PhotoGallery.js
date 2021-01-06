@@ -7,9 +7,14 @@ class PhotoGallery extends Component {
         this.state = {currentImage: 0}
     }
 
+    isLastImage (currentImage) {
+        return currentImage === this.props.images.length - 1
+    }
+
     handlePhotoChange = () => {
         this.setState(prevState => {
-           return {currentImage: prevState.currentImage + 1}
+           const nextImage = this.isLastImage(prevState.currentImage) ? 0 : prevState.currentImage + 1
+           return {currentImage: nextImage}
         })
     }
 

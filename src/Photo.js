@@ -1,3 +1,5 @@
+import React from 'react';
+import { PropTypes } from 'prop-types';
 function Photo(props) {      
     return (
         <img
@@ -7,5 +9,10 @@ function Photo(props) {
         />
     );
 }
+
+Photo.propTypes = {
+    image: PropTypes.object,
+    handlePhotoClick: PropTypes.func
+};
 
 export default Photo;

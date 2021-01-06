@@ -1,4 +1,5 @@
 // import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 import PhotoGallery from './PhotoGallery';
 // import ocelot from './images/ocelot.jpg'
@@ -14,12 +15,10 @@ function App() {
     'url': 'https://www.jocooks.com/wp-content/uploads/2020/10/club-sandwich-1-9.jpg',
     'caption': 'picture 2'
   }
-]
+];
   return (
     <div className="App">
-
       <PhotoGallery images={images} />
-
     </div>
   );
 }

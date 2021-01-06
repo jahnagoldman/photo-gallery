@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import PhotoGallery from './PhotoGallery';
+// import ocelot from './images/ocelot.jpg'
+// import sunflower from './images/sunflower.jpg'
 
 function App() {
+  const images = [
+  {
+    'url': 'https://www.elmwoodparkzoo.org/wp-content/uploads/2018/05/1920x1080-Ocelotedit.jpg',
+    'caption': 'picture 1'
+  },
+  {
+    'url': 'https://www.jocooks.com/wp-content/uploads/2020/10/club-sandwich-1-9.jpg',
+    'caption': 'picture 2'
+  }
+]
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <PhotoGallery images={images} />
+
     </div>
   );
 }

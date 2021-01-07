@@ -1,0 +1,7 @@
+.PhotoCaption {
+    position: absolute;
+    font-weight: bold;
+    font-size: 40px;
+    top: 90%;
+    left: 50%;
+}

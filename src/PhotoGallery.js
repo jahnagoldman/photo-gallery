@@ -1,34 +1,42 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import Photo from './Photo';
 import { PropTypes } from 'prop-types';
+import { useSwipeable } from 'react-swipeable'
+import './PhotoGallery.css';
+function PhotoGallery(props) {
+  const [index, setIndex] = useState(0);
 
-class PhotoGallery extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {currentImageIndex: 0};
+  const handlers = useSwipeable({
+    onSwipedLeft: () => goToNext(),
+    onSwipedRight: () => goToPrevious(),
+    preventDefaultTouchmoveEvent: true,
+    trackMouse: true
+  });
+
+  function goToNext () {
+    isLastImage() ? setIndex(0) : setIndex(index + 1);
   }
 
-  isLastImage (currentImageIndex) {
-    return currentImageIndex === this.props.images.length - 1;
-  };
-
-  handlePhotoChange = () => {
-    this.setState(prevState => {
-      const nextImageIndex = this.isLastImage(prevState.currentImageIndex) ? 0 : prevState.currentImageIndex + 1;
-      return {currentImageIndex: nextImageIndex};
-    })
+  function goToPrevious () {
+    isFirstImage() ? setIndex(props.images.length - 1) : setIndex(index - 1);
   }
 
-  render() {
-    return (
-      <div className="photo-gallery">
-        {!this.props.images || this.props.images.length === 0
-          ? <h1>No photos!</h1>
-          : <Photo handlePhotoClick= {this.handlePhotoChange} image={this.props.images[this.state.currentImageIndex]}/>
-        }
-      </div>
-    );
+  function isLastImage () {
+    return index === props.images.length - 1;
   }
+
+  function isFirstImage () {
+    return index === 0;
+  }
+
+  return (
+    <div {...handlers}>
+      {!props.images || props.images.length === 0
+        ? <div className="NoPhotos">No photos!</div>
+        : <Photo handlePhotoClick={() => goToNext()} image={props.images[index]}/>
+      }
+    </div>
+  );
 }
 
 PhotoGallery.propTypes = {

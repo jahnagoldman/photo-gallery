@@ -1,7 +1,21 @@
+.Photo {
+  background-size: 300px 150px;
+  display: flex;
+  justify-content: center;
+}
+
 .PhotoCaption {
-    position: absolute;
-    font-weight: bold;
-    font-size: 40px;
-    top: 90%;
-    left: 50%;
+  font-family: Helvetica;
+  font-size: 40px;
+  font-weight: bold;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+}
+
+img {
+  cursor: pointer;
+  height: auto;
+  margin-top: 40px;
+  max-width: 90%;
 }

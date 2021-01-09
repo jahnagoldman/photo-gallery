@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import Photo from './Photo';
-import { PropTypes } from 'prop-types';
 import { useSwipeable } from 'react-swipeable'
+import { PropTypes } from 'prop-types';
+import Photo from './Photo';
 import './PhotoGallery.css';
+
 function PhotoGallery(props) {
   const [index, setIndex] = useState(0);
 

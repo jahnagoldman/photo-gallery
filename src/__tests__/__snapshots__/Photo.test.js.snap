@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Photo renders the photo blank state 1`] = `
+<div>
+  <div
+    class="PhotoContainer"
+  >
+    <div
+      class="BlankPhoto"
+    >
+      No photo.
+    </div>
+    <div
+      class="PhotoCaption"
+    />
+  </div>
+</div>
+`;
+
+exports[`Photo renders the photo with caption and image. 1`] = `
+<div>
+  <div
+    class="PhotoContainer"
+  >
+    <img
+      alt="new"
+      src="abc.com"
+    />
+    <div
+      class="PhotoCaption"
+    >
+      pic 1
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Photo renders the photo with caption, no image. 1`] = `
+<div>
+  <div
+    class="PhotoContainer"
+  >
+    <div
+      class="BlankPhoto"
+    >
+      No photo.
+    </div>
+    <div
+      class="PhotoCaption"
+    >
+      pic 1
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Photo renders the photo with image, no caption 1`] = `
+<div>
+  <div
+    class="PhotoContainer"
+  >
+    <img
+      alt="new"
+      src="abc.com"
+    />
+    <div
+      class="PhotoCaption"
+    />
+  </div>
+</div>
+`;

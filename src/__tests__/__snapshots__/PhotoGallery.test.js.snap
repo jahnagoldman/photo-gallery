@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PhotoGallery clicking the image takes you to the next image & clicking last image takes you to the first image 1`] = `
+<div>
+  <div>
+    <div
+      class="PhotoContainer"
+    >
+      <img
+        alt="new"
+        src="abc.com"
+      />
+      <div
+        class="PhotoCaption"
+      >
+        Picture 1
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`PhotoGallery clicking the image takes you to the next image & clicking last image takes you to the first image 2`] = `
+<div>
+  <div>
+    <div
+      class="PhotoContainer"
+    >
+      <img
+        alt="new"
+        src="hey.com"
+      />
+      <div
+        class="PhotoCaption"
+      >
+        Picture 2
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`PhotoGallery renders with empty list of images 1`] = `
+<div>
+  <div>
+    <div
+      class="NoPhotos"
+    >
+      No photos!
+    </div>
+  </div>
+</div>
+`;
+
+exports[`PhotoGallery renders with images 1`] = `
+<div>
+  <div>
+    <div
+      class="PhotoContainer"
+    >
+      <img
+        alt="new"
+        src="abc.com"
+      />
+      <div
+        class="PhotoCaption"
+      >
+        hello
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`PhotoGallery renders without images 1`] = `
+<div>
+  <div>
+    <div
+      class="NoPhotos"
+    >
+      No photos!
+    </div>
+  </div>
+</div>
+`;

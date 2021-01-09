@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders App component 1`] = `
+<div>
+  <div
+    onMouseDown={[Function]}
+  >
+    <div
+      className="PhotoContainer"
+    >
+      <img
+        alt="new"
+        onClick={[Function]}
+        src="https://www.elmwoodparkzoo.org/wp-content/uploads/2018/05/1920x1080-Ocelotedit.jpg"
+      />
+      <div
+        className="PhotoCaption"
+      >
+        Ocelot
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -11,7 +11,7 @@
 }
 
 .PhotoCaption {
-  font-family: Helvetica;
+  font-family: 'Courier New';
   font-size: 40px;
   font-weight: bold;
   position: absolute;
@@ -25,4 +25,6 @@ img {
   height: auto;
   margin-top: 40px;
   max-width: 90%;
+  border: 6px solid black;
+  border-radius: 5px;
 }

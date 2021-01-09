@@ -8,5 +8,5 @@
 
 ## Running the project:
 - Run `yarn install` to install dependencies
-- Run the project with `yarn start` and go to `localhost:3000
+- Run the project with `yarn start` and go to `localhost:3000`
 - Run the tests with `yarn test`
